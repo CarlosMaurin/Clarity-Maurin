@@ -1,0 +1,6 @@
+.cart:hover{
+    fill: red;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
