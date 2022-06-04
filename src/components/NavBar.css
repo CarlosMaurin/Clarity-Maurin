@@ -51,10 +51,15 @@
     fill: white;
 } */
 
-.navbar-toggler{
-    font-size: 23px;
-}
+.navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: black;
 
+}
+.list-icon{
+    font-size: 30px;
+}
 
 .cart-number{
     background-color: white;

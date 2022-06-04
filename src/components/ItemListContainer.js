@@ -1,9 +1,15 @@
 import React from 'react'
+import ItemCount from './ItemCount';
 
-function ItemListContainer({greeting}) {
+function ItemListContainer() {
+    
+    const onAdd = (count) =>{
+        alert(`Ud ha agregado ${count} items a su carrito`);
+    }
+    
     return (
         <>
-            <h1>Bienvenidos!: {greeting} </h1>
+            <ItemCount initial={1} stock={10} onAdd={onAdd}/>
         </>
     )
 }

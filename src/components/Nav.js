@@ -38,13 +38,12 @@ export default function Nav() {
                                 <CartWidget/>
                             </span>
                             <span className='text-dark fw-bold d-flex justify-content-center align-items-center cart-number'><p className='m-0'>{4}</p></span>
-
                         </form>
                         </div>
                     </div>
                 </nav>
             </header>
-            <main>
+            {/* <main>
                 <div className='container-fluid'>
                     <div className='row'>
                         <div className='col-12 d-flex justify-content-center'>
@@ -52,7 +51,7 @@ export default function Nav() {
                         </div>
                     </div>
                 </div>
-            </main>
+            </main> */}
         </>
     )
 }
