@@ -21,8 +21,8 @@ function ItemCount({initial, stock, onAdd}) {
 
     return (
         <>
-            <div className='container-fluid mt-5'>
-                <div className='row'>
+            <div className='container-fluid mt-2 mb-4'>
+                <div className='row d-flex justify-content'>
                     <div className='col-12 d-flex justify-content-center'>
                         <button onClick={(restar)} className="menos bg-dark">-</button>
                         <span className='contador'>{count}</span>
