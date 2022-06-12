@@ -12,12 +12,13 @@ function Item( {item} ) {
         <>
 
             <div className="card mb-5 col-lg-6 item-card mx-4" style={{width: 18 + "rem"}}>
-                <img src={item.img} className="card-img-top img-fluid mx-auto mt-4" alt="..." style={{width: 12 + "rem"}}/>
+                <img src={item.img1} className="card-img-top img-fluid mx-auto mt-4" alt="..." style={{width: 12 + "rem"}}/>
                 <div className="card-body">
                     <h5 className="card-title">{item.titulo} </h5>
                     <p className="card-text">MATERIAL: {item.material} </p>
                     <p>Precio: {item.precio} </p>
                     {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
+                    <button className='detalles bg-dark d-flex mx-auto'>Ver detalles</button>
                 </div>
                 <ItemCount initial={1} stock={10} onAdd={onAdd}/>
             </div>
