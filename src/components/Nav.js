@@ -21,15 +21,33 @@ export default function Nav() {
                             <li className="nav-item">
                             <a className="nav-link active text-light" href="#">Home</a>
                             </li>
-                            <li className="nav-item">
-                            <a className="nav-link text-light" href="#">Link</a>
+                            {/* <li className="nav-item">
+                            <a className="nav-link text-light" href="#">Anillos</a>
                             </li>
                             <li className="nav-item">
-                            <a className="nav-link text-light" href="#">Contacto</a>
+                            <a className="nav-link text-light" href="#">Dijes</a>
                             </li>
                             <li className="nav-item">
-                            <a className="nav-link text-light" href="#">Disabled</a>
+                            <a className="nav-link text-light" href="#">Relojes</a>
+                            </li> */}
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categorías
+                                </a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a className="dropdown-item" href="#">Anillos</a></li>
+                                    <li><a className="dropdown-item" href="#">Dijes</a></li>
+                                    <li><a className="dropdown-item" href="#">Relojes</a></li>
+                                </ul>
                             </li>
+                            <li className="nav-item">
+                            <a className="nav-link active text-light" href="#">Medidas</a>
+                            </li>
+                            <li className="nav-item">
+                            <a className="nav-link active text-light" href="#">Contacto</a>
+                            </li>
+
+                            
                         </ul>
                         <form className="d-flex">
                             <input className=" me-0 ps-2 search" type="search" placeholder="Search" aria-label="Search"/>

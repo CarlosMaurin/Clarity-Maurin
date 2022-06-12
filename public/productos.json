@@ -1,0 +1,44 @@
+
+{"items":[
+
+    {
+        "id": 1,
+        "categoria": "anillos",
+        "titulo": "alianza plata y oro",
+        "marca": "clarity",
+        "material": "plata y oro",
+        "descripcion": "alianzas de plata y oro con medidas a definir. Diseño de autor by Clarity",
+        "precio": "$5.000",
+        "img1": "./anillo-platayoro1.png",
+        "img2": "./anillo-platayoro2.png",
+        "img3": "./anillo-platayoro3.png"
+    },
+    
+    {
+        "id": 5,
+        "categoria": "dijes",
+        "titulo": "dije árbol de la vida",
+        "marca": "clarity",
+        "material": "plata",
+        "descripcion": "dije árbol de la vida. Diseño de autor by Clarity",
+        "precio": "$3.500",
+        "img1": "./dije-arbolvida1.png",
+        "img2": "./dije-arbolvida2.png",
+        "img3": "./dije-arbolvida3.png"
+    },
+
+    {
+        "id": 9,
+        "categoria": "relojes",
+        "titulo": "Reloj mujer clasico",
+        "marca": "Tommy Hilfigher",
+        "material": "acero",
+        "descripcion": "Reloj de acero Tommy Hilfigher estilo clasico",
+        "precio": "$75.360",
+        "img1": "./reloj-tommy1.png",
+        "img2": "./reloj-tommy2.png",
+        "img3": "./reloj-tommy3.png"
+    }
+    
+
+]}

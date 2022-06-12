@@ -17,7 +17,7 @@ function ItemListContainer() {
                     {id: 3, img: "https://argyor.com.mx/949-large_default/dije-de-oro-14k-arbol-de-la-vida-brillo-mate-248400097.jpg", titulo: "Dije Arbol de la Vida", material: "Alpaca", precio: 3300},
                     {id: 4, img: "https://www.sanborns.com.mx/imagenes-sanborns-ii/1200/7506237962065.jpg", titulo: "Anteojos Aviador Zero", material: "Grafito", precio: 6460}
                 ]);
-            }, 3000);
+            }, 2000);
         });
     
 
