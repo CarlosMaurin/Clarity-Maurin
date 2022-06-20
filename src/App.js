@@ -3,6 +3,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import Nav from './components/Nav';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
+import Cart from './components/Cart';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path='/Home' element={<ItemListContainer/>} />
       <Route path='/categoria/:categoryid' element={<ItemListContainer/> } />
       <Route path='/producto/:id' element={<ItemDetailContainer/> } />
+      <Route path='/cart' element={<Cart/>} />
 
 
       {/* <Route path='/categories/:category' element={itemlistcontainer pero con productos filtrados} />

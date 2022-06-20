@@ -4,20 +4,19 @@ import '../components/ItemCount.css';
 
 function ItemCount({initial, stock, onAdd}) {
     
-    let [count, setCount] = useState(initial)
+    const [count, setCount] = useState(initial)
     
     const sumar = () =>{
         if(count < stock){
-            setCount(count += 1);
+            setCount(count + 1);
         }
     }
 
     const restar = () =>{
         if(count > initial){
-            setCount(count -= 1);
+            setCount(count - 1);
         }
     } 
-
 
     return (
         <>

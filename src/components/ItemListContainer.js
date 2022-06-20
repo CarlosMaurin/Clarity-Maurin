@@ -31,15 +31,9 @@ function ItemListContainer() {
             .then((res)=>{
 
                 setItems(res);
-                if(categoryid === "anillos"){
+                if(categoryid){
 
-                    setItems(res.filter(obj => obj.categoria === "anillos"));  //aqui va el filter//
-                }else if(categoryid === "dijes"){
-
-                    setItems(res.filter(obj => obj.categoria === "dijes"));  //aqui va el filter//
-                }else if(categoryid === "relojes"){
-                    setItems(res.filter(obj => obj.categoria === "relojes"));  //aqui va el filter//
-
+                    setItems(res.filter(obj => obj.categoria === categoryid));  //aqui va el filter//
                 }else{
                     setItems(res);
                 }

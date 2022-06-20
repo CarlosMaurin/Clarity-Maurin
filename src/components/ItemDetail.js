@@ -2,12 +2,18 @@ import React from 'react'
 import "../components/ItemDetail.css";
 import {Link} from "react-router-dom";
 import ItemCount from './ItemCount';
+import {useState} from "react";
 
 
 function ItemDetail({producto} ) {
     
+
+    const [showItemCount, setShowItemCount] = useState(false);
+
+
     const onAdd = (count) =>{
         alert(`Ud ha agregado ${count} items a su carrito`);
+        setShowItemCount(true);
     }
     
     return (
@@ -42,7 +48,11 @@ function ItemDetail({producto} ) {
                                         <h3>{producto.precio} </h3>
                                     </div>
                                     <div className='col-12'>
-                                        <ItemCount initial={1} stock={10} onAdd={onAdd}/>
+                                        {showItemCount ? 
+                                            <>
+                                                <button className='p-1'><Link to="/cart">Ir al carrito</Link></button><button className='p-1 ms-3' onClick={()=> setShowItemCount(false)}>Seguir comprando</button>
+                                            </> : 
+                                            <ItemCount initial={1} stock={10} onAdd={onAdd}/>}
                                     </div>
                                 </div>
                             </div>
