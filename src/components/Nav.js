@@ -55,7 +55,7 @@ export default function Nav() {
                             <span className='ms-2'>
                                 <CartWidget/>
                             </span>
-                            <span className='text-dark fw-bold d-flex justify-content-center align-items-center cart-number'><p className='m-0'>{4}</p></span>
+                            {/* <span className='text-dark fw-bold d-flex justify-content-center align-items-center cart-number'><p className='m-0'>{4}</p></span> */}
                         </form>
                         </div>
                     </div>

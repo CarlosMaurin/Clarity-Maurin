@@ -4,6 +4,7 @@ import ItemListContainer from './components/ItemListContainer';
 import Nav from './components/Nav';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Cart from './components/Cart';
+import MyCartContext from './context/CartContext';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
     
     <BrowserRouter>
+    <MyCartContext>
     <Nav/>
     <Routes>
       <Route path='/' element={<ItemListContainer/>} />
@@ -27,6 +29,7 @@ function App() {
       <Route path='' element={} />
       <Route path='' element={} /> */}
     </Routes> 
+    </MyCartContext>
     {/* <Footer/> */}
     </BrowserRouter>
 

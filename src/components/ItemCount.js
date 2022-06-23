@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+// import React, {useState} from 'react';
 import '../components/ItemCount.css';
 
 
-function ItemCount({initial, stock, onAdd}) {
+function ItemCount({count, setCount, stock, onAdd}) {
     
-    const [count, setCount] = useState(initial)
+    // const [count, setCount] = useState(initial)
     
     const sumar = () =>{
         if(count < stock){
@@ -13,7 +13,7 @@ function ItemCount({initial, stock, onAdd}) {
     }
 
     const restar = () =>{
-        if(count > initial){
+        if(count > 1){
             setCount(count - 1);
         }
     } 
@@ -28,7 +28,7 @@ function ItemCount({initial, stock, onAdd}) {
                         <button onClick={(sumar)} className="mas bg-dark">+</button>
                     </div>
                     <div className='col-12 d-flex justify-content-center mt-2'>
-                        <button onClick={() => {onAdd(count); setCount(initial)}} className='add-button bg-dark'>Agregar al carrito</button>
+                        <button onClick={() => {onAdd(); setCount(1)}} className='add-button bg-dark'>Agregar al carrito</button>
                         
                     </div>
                 </div>

@@ -1,19 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../components/ItemDetail.css";
 import {Link} from "react-router-dom";
 import ItemCount from './ItemCount';
 import {useState} from "react";
+import { CartContext } from '../context/CartContext';
 
 
 function ItemDetail({producto} ) {
     
+    const [count, setCount] = useState(1)
 
     const [showItemCount, setShowItemCount] = useState(false);
+    const {isInCart, addItem, cart, getItemQuantity} = useContext(CartContext);
 
-
-    const onAdd = (count) =>{
+    const onAdd = () =>{
         alert(`Ud ha agregado ${count} items a su carrito`);
         setShowItemCount(true);
+        isInCart(producto.id);
+        addItem(producto, count);
+        // getItemQuantity()
     }
     
     return (
@@ -50,9 +55,12 @@ function ItemDetail({producto} ) {
                                     <div className='col-12'>
                                         {showItemCount ? 
                                             <>
-                                                <button className='p-1'><Link to="/cart">Ir al carrito</Link></button><button className='p-1 ms-3' onClick={()=> setShowItemCount(false)}>Seguir comprando</button>
+                                                <button className='p-1'>
+                                                    <Link to="/cart">Ir al carrito</Link>
+                                                </button>
+                                                <button className='p-1 ms-3' onClick={()=> setShowItemCount(false)}>Seguir comprando</button>
                                             </> : 
-                                            <ItemCount initial={1} stock={10} onAdd={onAdd}/>}
+                                            <ItemCount stock={10} onAdd={onAdd} count={count} setCount={setCount} />}
                                     </div>
                                 </div>
                             </div>
