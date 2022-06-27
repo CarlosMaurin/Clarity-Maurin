@@ -71,9 +71,10 @@ function ItemListContainer() {
                 setItems(
                     snapshot.docs.map(doc =>({...doc.data(), id: doc.id}))
                 )
-                .catch( error => {
-                    console.log(error)})
+                
             })
+            .catch( error => {
+                console.log(error)});
         }else{
             getDocs(itemsCollection).then(snapshot =>{
                 setItems(snapshot.docs.map(doc =>({...doc.data(), id: doc.id})));
