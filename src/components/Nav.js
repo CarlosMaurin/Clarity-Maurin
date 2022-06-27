@@ -3,10 +3,15 @@ import logo from '../assets/img/logo.png';
 import '../components/NavBar.css';
 import CartWidget from './CartWidget';
 import {Link} from "react-router-dom";
+import Category from './Category';
 
 
 export default function Nav() {
     
+        
+
+
+
     return (
         <>
             <header>
@@ -21,23 +26,18 @@ export default function Nav() {
                             <li className="nav-item">
                             <Link to="/Home" className="nav-link active text-light" href="#">Home</Link>
                             </li>
-                            {/* <li className="nav-item">
-                            <a className="nav-link text-light" href="#">Anillos</a>
-                            </li>
-                            <li className="nav-item">
-                            <a className="nav-link text-light" href="#">Dijes</a>
-                            </li>
-                            <li className="nav-item">
-                            <a className="nav-link text-light" href="#">Relojes</a>
-                            </li> */}
+                            
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Categorías
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><Link to="/categoria/anillos" className="dropdown-item" href="#">Anillos</Link></li>
-                                    <li><Link to="/categoria/dijes" className="dropdown-item" href="#">Dijes</Link></li>
-                                    <li><Link to="/categoria/relojes" className="dropdown-item" href="#">Relojes</Link></li>
+                                    {/* <li><Link to="/categoria/anillos" className="dropdown-item" href="#">Anillos</Link></li>
+                                        <li><Link to="/categoria/dijes" className="dropdown-item" href="#">Dijes</Link></li>
+                                        <li><Link to="/categoria/relojes" className="dropdown-item" href="#">Relojes</Link></li> */}
+                                    <Category/>
+                                        
+                                        
                                 </ul>
                             </li>
                             <li className="nav-item">

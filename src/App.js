@@ -5,9 +5,25 @@ import Nav from './components/Nav';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Cart from './components/Cart';
 import MyCartContext from './context/CartContext';
+import { initializeApp } from "firebase/app";
+
+
+
+
 
 
 function App() {
+
+  
+  initializeApp({
+    apiKey: "AIzaSyBQ2YVTmWFFD57444iqNTr4gPi4UtXWBVU",
+    authDomain: "clarity-maurin.firebaseapp.com",
+    projectId: "clarity-maurin",
+    storageBucket: "clarity-maurin.appspot.com",
+    messagingSenderId: "1059447996517",
+    appId: "1:1059447996517:web:8a66030949ceeec845c68c"
+  });
+  
   return (
     <>
 
