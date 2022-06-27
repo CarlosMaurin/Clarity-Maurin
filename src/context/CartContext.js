@@ -24,11 +24,10 @@ function MyCartContext({children} ) {
         if(isInCart(newProducto.id)){
             const findProduct = cart.find(item => item.id === newProducto.id);
             const productIndex = cart.indexOf(findProduct);
-            // const auxArray = [...cart];
-            // auxArray[productIndex].count += count;
-            // setCart(auxArray);
-            cart[productIndex].count += count
-            setCart(cart);
+            const auxArray = [...cart];
+            auxArray[productIndex].count += count;
+            setCart(auxArray);
+            
             
 
         }else{
