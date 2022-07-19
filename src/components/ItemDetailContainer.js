@@ -3,12 +3,14 @@ import ItemDetail from './ItemDetail';
 import { useParams } from "react-router-dom";
 // import { productos } from '../productos';
 import { doc, getDoc, getFirestore } from "firebase/firestore";
+import "../components/ItemDetailContainer.css";
 
 
 
 function ItemDetailContainer() {
     
     const [producto, setProducto] = useState({});
+    const [loading, setLoading] = useState(true);
     const {id} = useParams();
 
     
@@ -47,10 +49,10 @@ function ItemDetailContainer() {
         })
         .catch(error => {
             console.log(error);
+        })
+        .finally(()=>{
+            setLoading(false);
         });
-        // .finally(()=>{
-        //     setLoading(false);
-        // });
     
 
 
@@ -64,7 +66,17 @@ function ItemDetailContainer() {
     return (
         
         <>
-            <ItemDetail producto={producto} />
+            {loading ? 
+                <div class="dot-wave">
+                    <div class="dot-wave__dot mx-2"></div>
+                    <div class="dot-wave__dot mx-2"></div>
+                    <div class="dot-wave__dot mx-2"></div>
+                    <div class="dot-wave__dot mx-2"></div>
+                </div>
+                :
+                <ItemDetail producto={producto} />                
+                }        
+            
         </>
     )
 }

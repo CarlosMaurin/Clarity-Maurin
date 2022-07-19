@@ -21,7 +21,6 @@ function Category() {
     })
     .catch( error => {
     console.log(error)});
-    
   }, [])
   
   
@@ -30,8 +29,7 @@ function Category() {
     {categoria.map((cat)=> {
       return(
           <div key={cat.id}>
-          <li><Link to={`/categoria/${cat.nombre}`} className="dropdown-item" href="#">{cat.label} </Link></li>
-          
+          <li><Link to={`/categoria/${cat.nombre}`} className="dropdown-item">{cat.label} </Link></li>
           </div>
       )
     })}

@@ -1,11 +1,42 @@
+#header{
+    /* position: absolute;
+    z-index: 10; */
+    background-image: url(https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1033&q=80);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
 
+}
+.nav{
+    position: absolute;
+}
+
+/* .nav-imagen{
+    position: relative;
+    
+} */
 
 .logo{
     
-    width: 5rem;
+    width: 6rem;
     margin-left: 1rem;
 }
+.navbar-toggler{
+    border: none;
+    outline: none;
+}
 
+.fa-bars{
+    font-size: 26px;
+    color: #ffff;
+}
+.fa-xmark{
+    font-size: 26px;
+    color: #ffff;
+}
 .nav-link{
     /* color: black; */
     /* font-weight: bold; */
@@ -67,4 +98,114 @@
     border-radius: 50px;
     width: 20px;
     height: 20px;
+}
+.titulo-header{
+    font-size: 5rem;
+}
+/* .boton-header{
+    background-color: transparent;
+    border: solid 3px white;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+} */
+.link-header{
+    text-decoration: none;
+    color: white;
+}
+.boton-header:hover .link-header{
+    color: black;
+    font-weight: bold;
+}
+/* .container-bienvenida{
+    background-color: black;
+} */
+.bienvenida{
+    z-index: 2;
+    width: 70%;
+    margin-top: -100px;
+    padding: 20px 80px;
+    border-radius: 200px 200px 20px 20px;
+    box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.2);
+    background-color: #ffff;
+}
+
+.fixed-active{
+    background-color: black;
+    transition: background-color 500ms linear;
+    opacity: 0.95;
+}
+
+
+/* From uiverse.io */
+.boton-header {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: transparent;
+    border: solid 2px white;
+    /* border-radius: 20px; */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.boton-header:hover {
+    background-color: #ffff;
+    box-shadow: 0px 15px 20px rgba(178, 202, 192, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.boton-header:active {
+    transform: translateY(-1px);
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+.titulo-header{
+    font-size: 4rem;
+    
+}
+.boton-header{
+    padding: 1rem;
+}
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+    .titulo-header{
+        font-size: 3.5rem;
+        
+    }
+    .boton-header{
+        padding: 0.7rem;
+    }
+    }
+
+@media (min-width: 330px) and (max-width: 575px){
+    .titulo-header{
+        font-size: 3rem;
+        
+    }
+    .boton-header{
+        padding: 0.5rem;
+    }
+    #header{
+        height: 75vh;
+    }
+}
+
+@media (max-width: 329px){
+    .titulo-header{
+        font-size: 2.5rem;
+        
+    }
+    .boton-header{
+        padding: 0.3rem;
+    }
+    #header{
+        height: 75vh;
+    }
 }

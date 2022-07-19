@@ -1,4 +1,5 @@
 import React from 'react';
+// import CategoriaContainer from './CategoriaContainer';
 // import ItemCount from './ItemCount';
 import {useEffect, useState} from "react";
 // import { productos } from '../productos';
@@ -9,6 +10,7 @@ import { collection, getDocs, getFirestore, query, where } from "firebase/firest
 function ItemListContainer() {
     
     const [items, setItems] = useState([]);
+    const [loading, setLoading]= useState(true);
     const {categoryid} = useParams();
 
     
@@ -74,16 +76,21 @@ function ItemListContainer() {
                 
             })
             .catch( error => {
-                console.log(error)});
+                console.log(error)})
+            .finally(()=>{
+                setLoading(false);
+            });
         }else{
-            getDocs(itemsCollection).then(snapshot =>{
+            getDocs(itemsCollection)
+            .then(snapshot =>{
                 setItems(snapshot.docs.map(doc =>({...doc.data(), id: doc.id})));
             })
             .catch( error => {
                 console.log(error)})
-            // .finally(()=>{
-            //     setLoading(false),
-            // })
+            .finally(()=>{
+                setLoading(false);
+            });
+            
         }
         
         
@@ -107,11 +114,26 @@ function ItemListContainer() {
     
     return (
         <>
-            <ItemList items={items}/>
-            {/* <ItemCount initial={1} stock={10} onAdd={onAdd}/> */}
+            {loading ?
+            <div class="dot-wave">
+                <div class="dot-wave__dot mx-2"></div>
+                <div class="dot-wave__dot mx-2"></div>
+                <div class="dot-wave__dot mx-2"></div>
+                <div class="dot-wave__dot mx-2"></div>
+            </div>
+            :
+            <ItemList items={items}/>            
+            }
             
         </>
     )
 }
 
 export default ItemListContainer;
+
+
+
+
+
+
+

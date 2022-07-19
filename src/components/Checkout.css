@@ -1,0 +1,102 @@
+
+
+.container-checkout{
+    
+    padding-top: 2.5rem;
+    background-color: grey;
+    height: 75vh;
+}
+.row-form{
+    display: flex;
+    justify-content: center;
+}
+
+.col-container{
+    border-radius: 0.5rem;
+    background-color: whitesmoke;
+}
+
+.col-producto{
+    background-color: lightgray;
+    border-radius: 0.5rem;
+}
+
+.col-form{
+    background-color: lightgray;
+    border-radius: 0.5rem;
+}
+
+.validacion{
+    color: red;
+    font-size: 0.7rem;
+    font-weight: bold;
+
+}
+label{
+    font-weight: bold;
+}
+
+
+
+/* From uiverse.io */
+.confirmar-compra {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+   }
+   
+   .confirmar-compra:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+   .confirmar-compra:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   
+   .confirmar-compra::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+   }
+   
+   .confirmar-compra::after {
+    background-color: #fff;
+   }
+   
+   .confirmar-compra:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+   }
+
+   .container-orden{
+    background-color: grey;
+
+   }
+
+   .col-orden{
+    background-color: lightgray;
+    border-radius: 1rem;
+   }
+
+
+

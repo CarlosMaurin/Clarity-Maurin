@@ -1,3 +1,27 @@
 .main-container{
-    margin-top: 9rem;
+    padding-top: 4rem;
+    /* background-color: #A9927D; */
+    background-color: #DDE1D4;
+}
+.main-container h1{
+    font-size: 1.6rem;
+}
+
+
+.main-container{
+    padding-top: 4rem;
+    /* background-color: #A9927D; */
+    background-color: #DDE1D4;
+}
+
+@media (min-width: 330px) and (max-width: 575px){
+    .main-container{
+        padding-top: 7rem;
+    }     
+}
+    
+@media (max-width: 329px){
+    .main-container{
+        padding-top: 7rem;
+    }
 }

@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
@@ -6,6 +7,10 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Cart from './components/Cart';
 import MyCartContext from './context/CartContext';
 import { initializeApp } from "firebase/app";
+import Checkout from './components/Checkout';
+import Footer from './components/Footer';
+import CategoriaContainer from './components/CategoriaContainer';
+import NavDos from './components/NavDos';
 
 
 
@@ -30,13 +35,19 @@ function App() {
     
     <BrowserRouter>
     <MyCartContext>
-    <Nav/>
+    {/* <Nav/> */}
     <Routes>
-      <Route path='/' element={<ItemListContainer/>} />
+      {/* <Route path='/' element={<ItemListContainer/>} />
       <Route path='/Home' element={<ItemListContainer/>} />
-      <Route path='/categoria/:categoryid' element={<ItemListContainer/> } />
-      <Route path='/producto/:id' element={<ItemDetailContainer/> } />
-      <Route path='/cart' element={<Cart/>} />
+      <Route path='/categoria/:categoryid' element={<ItemListContainer/> } /> */}
+      <Route path='/' element={<> <Nav/> <CategoriaContainer/> </>} />
+      <Route path='/Home' element={<> <Nav/> <CategoriaContainer/> </>} />
+      <Route path='/categorias' element={<> <NavDos/> <ItemListContainer/></> } />
+      <Route path='/categoria/:categoryid' element={<> <NavDos/> <ItemListContainer/></> } />
+      <Route path='/producto/:id' element={<><NavDos/> <ItemDetailContainer/></> } />
+      <Route path='/cart' element={<><NavDos/> <Cart/></>} />
+      <Route path='/checkout' element={<><NavDos/><Checkout/></>} />
+
 
 
       {/* <Route path='/categories/:category' element={itemlistcontainer pero con productos filtrados} />
@@ -46,7 +57,7 @@ function App() {
       <Route path='' element={} /> */}
     </Routes> 
     </MyCartContext>
-    {/* <Footer/> */}
+    <Footer/>
     </BrowserRouter>
 
 

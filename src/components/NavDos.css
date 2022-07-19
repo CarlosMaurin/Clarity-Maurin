@@ -1,0 +1,18 @@
+.nav-dos{
+    background-color: black;
+}
+
+@media (min-width: 330px) and (max-width: 575px){
+    .nav-dos{
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+        opacity: 0.95;
+    }    
+}
+    
+@media (max-width: 329px){
+    .nav-dos{
+        position: fixed;
+    }
+}
