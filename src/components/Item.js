@@ -14,7 +14,7 @@ function Item( {item} ) {
         <>
 
             {/* <div className="row"> */}
-                <div className="col-md-3 col-sm-6 mb-5">
+                <div className="col-8 col-md-3 col-sm-6 mb-5">
                     <div className="product-grid">
                         <div className="product-image">
                             <div className="image">

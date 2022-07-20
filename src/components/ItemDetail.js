@@ -26,9 +26,9 @@ function ItemDetail({producto} ) {
             <div className='container-fluid item-box'>
                 <div className='container-fluid' >
                     <div className='row' >
-                        <div className='col-8 mx-auto'>
-                            <div className='row'>
-                                <div className='col-8 pe-0' >
+                        <div className='col-10 col-sm-8 col-md-12 col-lg-12 col-xl-10 mx-auto'>
+                            <div className='row d-flex flex-column flex-md-row justify-content-lg-center'>
+                                <div className='col-12 col-md-8 col-lg-6 px-0' >
                                     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                                         <div className="carousel-inner producto-img">
                                             <div className="carousel-item active">
@@ -51,7 +51,7 @@ function ItemDetail({producto} ) {
                                         </button>
                                         </div>
                                 </div>
-                                <div className='col-4 descripcion-container pt-4'>
+                                <div className='col-12 col-md-4 col-lg-4 descripcion-container pt-4'>
                                     <h2>{producto.titulo}</h2>
                                     <p>${producto.precio}</p>
                                     <p>{producto.descripcion} </p>
@@ -70,12 +70,14 @@ function ItemDetail({producto} ) {
                                                         <span>Ir al carrito</span>
                                                     </button>
                                                 </Link>
-                                                <button className="cta" onClick={()=> setShowItemCount(false)}>
+                                                <Link to="/Home" className='text-center'>
+                                                <button className="cta my-3" onClick={()=> setShowItemCount(false)}>
                                                     <span className="hover-underline-animation"> Seguir comprando </span>
                                                     <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
                                                     <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
                                                     </svg>
                                                 </button>
+                                                </Link>
                                             </> : 
                                             <ItemCount stock={10} onAdd={onAdd} count={count} setCount={setCount} />}
                                     </div>

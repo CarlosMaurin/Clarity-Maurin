@@ -74,7 +74,8 @@ function ItemDetailContainer() {
                     <div class="dot-wave__dot mx-2"></div>
                 </div>
                 :
-                <ItemDetail producto={producto} />                
+                
+                <ItemDetail producto={producto}/>                
                 }        
             
         </>

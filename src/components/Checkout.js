@@ -99,10 +99,11 @@ function Checkout() {
             
             >
 
+
                 { ({values, handleChange, handleBlur, errors, touched} )=>(
                     <Form className='container-fluid container-checkout'>
                         <div className='row row-form'>
-                            <div className='col-5 col-form'>
+                            <div className='col-10 col-md-8 col-lg-8 col-xl-6 col-form'>
                                 <h3 className='text-center'>DATOS PERSONALES</h3>
                                 <div className='d-flex flex-column'>
 
@@ -152,10 +153,10 @@ function Checkout() {
             </Formik>
             :
             
-            <div className='container-fluid container-orden d-flex flex-column align-items-center py-5'>
+            <div className='container-fluid container-orden d-flex flex-column align-items-center pb-5'>
                 <h1>CHECKOUT</h1>
                 <div className='row'>
-                    <div className='col-12 col-orden mx-auto py-3 px-5'>
+                    <div className='col-10 col-sm-8 col-orden mx-auto py-3 px-5'>
                         <h3>La orden fue registrada exitosamente con el siguiente id: </h3>
                         <p className='text-center my-5'>{idCompra} </p>
                         <div className='d-flex justify-content-center'>

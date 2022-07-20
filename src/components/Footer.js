@@ -15,7 +15,7 @@ function Footer() {
                     <div className='col-12 col-sm-8 text-light d-flex align-items-center flex-column justify-content-center' >
                         
                         <div className='row w-100' >
-                            <div className='col-12 px-0' >
+                            <div className='col-12 px-0 col-lg-6 mx-lg-auto' >
                                 <ul className='px-0 d-flex justify-content-between lista-footer w-100' >
                                     <li><a href='#'>home</a></li>
                                     <li><a href='#'>categorias</a></li>  

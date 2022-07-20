@@ -20,24 +20,24 @@ function Cart() {
                     <div className="block-heading">
                         <h2>RESUMEN DE COMPRA</h2>
                     </div>
-                    <div className="content d-flex">
-                        <div className=''>
+                    <div className="content d-flex flex-column flex-lg-row">
+                        <div className='content-item'>
                             {cart.map(item => {
                                 return(
                                     <div className='' key={item.id}>
 
-                                        <div className="col-md-12 col-lg-12">
+                                        <div className="col-10 mx-auto col-md-12 col-lg-12">
                                             <div className="items">
                                                 <div className="product">
                                                     <div className="row">
-                                                        <div className="col-md-3">
+                                                        <div className="col-8 col-md-3 d-flex mx-auto">
                                                             <img className="img-fluid mx-auto d-block image" src={item.img1} />
                                                         </div>
-                                                        <div className="col-md-8">
+                                                        <div className="col-md-9">
                                                             <div className="info">
                                                                 <div className="row">
-                                                                    <div className="col-md-5 product-name">
-                                                                        <div className="product-name d-flex align-items-center">
+                                                                    <div className="col-md-4 product-name">
+                                                                        <div className="product-name d-flex align-items-center justify-content-center">
                                                                             <span>{item.titulo} </span>
                                                                             
                                                                         </div>
@@ -46,28 +46,20 @@ function Cart() {
                                                                         <span>Cantidad:</span>
                                                                         <span>{item.count} </span>
                                                                     </div>
-                                                                    <div className="col-md-2 price d-flex align-items-center mt-0">
-                                                                        <span> {item.precio * item.count} </span>
+                                                                    <div className="col-md-2 price justify-content-center d-flex align-items-center mt-0">
+                                                                        <span> ${item.precio * item.count} </span>
                                                                     </div>
+                                                                    <div className='col-12 col-md-2 d-flex justify-content-center'>
 
-                                                                    <div onClick={()=>{deleteItem(item.id)}} className='col-2 d-flex justify-content-center flex-column'>
+                                                                    <div onClick={()=>{deleteItem(item.id)}} className='d-flex justify-content-center flex-column'>
                                                                         <button className="noselect">
                                                                             <span className="text">Borrar</span>
                                                                             <span className="icon">
                                                                                 <i className="bi bi-trash"></i>
                                                                             </span>
                                                                         </button>
-                                                                    
-                                                                    
-                                                                    
                                                                     </div>        
-
-
-
-
-
-
-
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -80,7 +72,8 @@ function Cart() {
                             })}
                         </div>
 
-                        <div className='w-50 summary-container'>
+
+                        <div className=' summary-container'>
                             <div className="col-md-12 col-lg-12">
                                 <div className="summary">
                                     <h3>Resumen</h3>
@@ -88,8 +81,8 @@ function Cart() {
                                     <div className="summary-item"><span className="text">Flete</span><span className="price">Gratis</span></div>
                                     <div className="summary-item"><span className="text">Total</span><span className="price">${getItemPrice()} </span></div>
                                     <div className='botones'>
-                                        <button type="button" className="btn btn-lg btn-block"><Link to="/checkout" className='boton-finalizar' >Finalizar compra</Link></button>
-                                        <button type="button" className="btn btn-lg btn-block boton-vaciar" onClick ={()=> emptyCart()} >Vaciar carrito</button>
+                                        <button type="button" className="btn  btn-block"><Link to="/checkout" className='boton-finalizar' >Finalizar compra</Link></button>
+                                        <button type="button" className="btn  btn-block boton-vaciar" onClick ={()=> emptyCart()} >Vaciar carrito</button>
                                     </div>
                                 </div>
                             </div>

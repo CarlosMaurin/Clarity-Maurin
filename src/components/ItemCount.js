@@ -21,7 +21,7 @@ function ItemCount({count, setCount, stock, onAdd}) {
 
     return (
         <>
-            <div className='container-fluid mt-2 mb-4'>
+            <div className='container-fluid mt-2 mb-4 px-0'>
                 <div className='row d-flex justify-content'>
                     <div className='col-12 d-flex justify-content-center'>
                         <button onClick={(restar)} className="menos bg-dark">-</button>
@@ -31,6 +31,7 @@ function ItemCount({count, setCount, stock, onAdd}) {
                     <div className='col-12 d-flex justify-content-center mt-2'>
                         <button onClick={() => {onAdd(); setCount(1)}} className='add-button bg-dark'>Agregar al carrito</button>
                         
+
                     </div>
                 </div>
             </div>
